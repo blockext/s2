@@ -20,23 +20,23 @@ def playtone(tone=500,time=1):
 @command("set S2 name to %s")
 def nameset(name):
     bot.setName(name)
-menu('ledpos',['right','left'])
-menu('onoff',['on','off'])
-@command('set %m.ledpos back LED to %m.onoff')
+menu("ledpos",["right","left'])
+menu("onoff",["on","off"])
+@command("turn %m.ledpos LED %m.onoff")
 def setled(ledpos="right", onoff="on"):
     bot.setLED(ledpos,onoff)
-    if onoff == 'off':
-        bot.setLED(ledpos,'off')
-@reporter('get line sensor %n value')
+    if onoff == "off":
+        bot.setLED(ledpos,"off")
+@reporter("get line sensor %n value")
 def getline(n=1):
     return bot.getLine(n - 1)
-@reporter('get IR sensor %n value')
+@reporter("get IR sensor %n value")
 def getline(n=1):
     return bot.getIR(n - 1)
-@reporter('get light sensor %n value')
+@reporter("get light sensor %n value")
 def getlight(n=1):
     return bot.getLight(n - 1)
-@reporter('S2 robot name')
+@reporter("get S2 name")
 def getname():
     return bot.getName()
 
@@ -45,4 +45,4 @@ def resetall():
     bot.stop()
 
 bot = Scribbler()
-blockext.run("Parallax S2 robot", 's2', 3610)
+blockext.run("Parallax S2 robot", "s2", 3610)
