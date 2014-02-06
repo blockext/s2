@@ -4,8 +4,6 @@ import blockext
 from blockext import *
 from myro import *
 
-bot = Scribbler()
-
 
 @command("stop all motors")
 def stopmotors():
@@ -45,5 +43,6 @@ def getname():
 @reset
 def resetall():
     bot.stop()
-    
+
+bot = Scribbler()
 blockext.run("Parallax S2 robot", 's2', 3610)
