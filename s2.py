@@ -1,7 +1,9 @@
 from __future__ import division
+
 import blockext
 from blockext import *
 from myro import *
+
 bot = Scribbler()
 
 
