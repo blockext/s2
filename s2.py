@@ -20,7 +20,7 @@ def playtone(tone=500,time=1):
 @command("set S2 name to %s")
 def nameset(name):
     bot.setName(name)
-menu("ledpos",["right","left'])
+menu("ledpos",["right","left"])
 menu("onoff",["on","off"])
 @command("turn %m.ledpos LED %m.onoff")
 def setled(ledpos="right", onoff="on"):
